@@ -1,0 +1,6 @@
+{
+  "name": "Signal Optimizer",
+  "description": "Boost cell signal strength and data speed with automated network setting diagnostics, real-time advanced telemetry meters, and latency-optimizing DNS configurations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

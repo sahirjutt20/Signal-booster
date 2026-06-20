@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Translucent backing shadow glow -->
+    <path
+        android:fillColor="#1500F2FE"
+        android:pathData="M54,54m-28,0a28,28 0,1 1,56 0a28,28 0,1 1,-56 0" />
+
+    <!-- Radiant Signal Waves (Concentric Arcs) -->
+    <!-- Small Wave -->
+    <path
+        android:strokeColor="#FF00F2FE"
+        android:strokeWidth="3.2"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M38,36 A 16,16 0 0,1 70,36" />
+
+    <!-- Large Wave -->
+    <path
+        android:strokeColor="#8000F2FE"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M24,36 A 30,30 0 0,1 84,36" />
+
+    <!-- Outer Wave -->
+    <path
+        android:strokeColor="#3000F2FE"
+        android:strokeWidth="2.0"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M12,36 A 42,42 0 0,1 96,36" />
+
+    <!-- Tower Structure (Sleek High-Tech Lattice Tower) -->
+    <!-- Base structural legs -->
+    <path
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M42,88 L51,40 L57,40 L66,88" />
+
+    <!-- Lattice cross bracing -->
+    <path
+        android:strokeColor="#E0FFFFFF"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M42,88 L61.5,64 M66,88 L46.5,64 M46.5,64 L57,40 M61.5,64 L51,40" />
+
+    <!-- Horizontal strut steps -->
+    <path
+        android:strokeColor="#E0FFFFFF"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M44.5,76 L63.5,76 M46.5,64 L61.5,64 M49,52 L59,52" />
+
+    <!-- Center Mast -->
+    <path
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M54,40 L54,28" />
+
+    <!-- Glowing Transmitter Core Node -->
+    <path
+        android:pathData="M54,28m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="radial"
+                android:centerX="54"
+                android:centerY="28"
+                android:gradientRadius="4.5">
+                <item
+                    android:color="#FFFFFFFF"
+                    android:offset="0.0" />
+                <item
+                    android:color="#FF00F2FE"
+                    android:offset="0.4" />
+                <item
+                    android:color="#FF0072FF"
+                    android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+</vector>
