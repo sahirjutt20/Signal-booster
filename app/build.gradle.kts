@@ -1,3 +1,5 @@
+import java.util.Base64
+
 plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.kotlin.compose)
@@ -6,9 +8,23 @@ plugins {
   alias(libs.plugins.secrets)
 }
 
+// Automatically restore debug.keystore from debug.keystore.base64 if missing
+val keystoreFile = file("${rootDir}/debug.keystore")
+val base64File = file("${rootDir}/debug.keystore.base64")
+if (!keystoreFile.exists() && base64File.exists()) {
+    try {
+        val base64Bytes = base64File.readBytes()
+        val decodedBytes = Base64.getMimeDecoder().decode(base64Bytes)
+        keystoreFile.writeBytes(decodedBytes)
+        println("Successfully restored debug.keystore from base64 representation.")
+    } catch (e: Exception) {
+        println("Warning: Failed to decode debug.keystore from base64: ${e.message}")
+    }
+}
+
 android {
   namespace = "com.example"
-  compileSdk = 36
+  compileSdk = 35
 
   defaultConfig {
     applicationId = "com.aistudio.signalbooster.vpwql"
