@@ -119,3 +119,21 @@ dependencies {
   "ksp"(libs.androidx.room.compiler)
   "ksp"(libs.moshi.kotlin.codegen)
 }
+
+tasks.register("copyApkToWorkspace") {
+    dependsOn("assembleDebug")
+    notCompatibleWithConfigurationCache("Task references script file/directory structures directly.")
+    doLast {
+        val srcFile = file("${layout.buildDirectory.get().asFile}/outputs/apk/debug/app-debug.apk")
+        val destFile = file("${rootDir}/SignalBooster.apk")
+        if (srcFile.exists()) {
+            srcFile.copyTo(destFile, overwrite = true)
+            println("APK successfully copied to: ${destFile.absolutePath}")
+        } else {
+            throw GradleException("Source APK not found at ${srcFile.absolutePath}")
+        }
+    }
+}
+
+
+
